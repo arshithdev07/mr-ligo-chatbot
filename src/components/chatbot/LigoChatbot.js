@@ -116,7 +116,7 @@ function LigoChatbot(props) {
   ];
 
   return <ChatBot 
-            headerTitle="Speech Recognition"
+            headerTitle="Ligo"
             recognitionEnable={true}
             speechSynthesis={{ enable: true, lang: 'en' }}
             steps={ligoMaterialUICaseSteps} 

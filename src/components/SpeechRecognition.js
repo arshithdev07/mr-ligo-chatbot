@@ -10,6 +10,7 @@ import App from './App.js';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 import DeleteIcon from '@material-ui/icons/Delete';
+import "../styles/App.css";
 
 
 const options = {
@@ -69,9 +70,10 @@ class Dictaphone extends React.Component {
     }
 
     return (
-      <div>
-        <img width="1250" height="595" src="assets/background.PNG"/>
+      <div >
+        <img className="app-background" src="assets/background.PNG" />
         <App
+            
              transcript = {transcript}
              resetTranscript = {this.resetResult}
              result = {this.state.result}

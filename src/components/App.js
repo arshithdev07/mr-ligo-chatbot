@@ -12,7 +12,6 @@ class App extends Component {
                 startListening = {this.props.startListening}
                 getVoiceAsText = {this.props.getVoiceAsText}
                 resetTranscript = {this.props.resetTranscript}/> */}
-
         <LigoChatbot  />
 
         {/* <Main resetTranscript = {this.props.resetTranscript}/> */}
