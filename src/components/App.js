@@ -3,11 +3,13 @@ import Header from './Header'
 import Main from './Main'
 import PropTypes from "prop-types";
 import LigoChatbot from "./chatbot/LigoChatbot";
+import VideoEmbed from "./VideoEmbed";
 
 class App extends Component {
   render() {
     return (
       <div>
+        {/* <VideoEmbed /> */}
         {/* <Header transcript = {this.props.transcript}
                 startListening = {this.props.startListening}
                 getVoiceAsText = {this.props.getVoiceAsText}

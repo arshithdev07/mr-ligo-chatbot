@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Avatar from '@material-ui/core/Avatar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import SearchOutlined from '@material-ui/icons/SearchOutlined';
+import ContactSupportIcon from '@material-ui/icons/ContactSupport';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import List from '@material-ui/core/List';
@@ -63,7 +64,7 @@ class TalkToCommunity extends React.Component  {
         <CssBaseline />
         <Paper className={classes.paper}>
           <Avatar className={classes.avatar}>
-            <SearchOutlined />
+            <ContactSupportIcon />
           </Avatar>
 
           <form className={classes.form}>
@@ -76,21 +77,27 @@ class TalkToCommunity extends React.Component  {
               <List component="nav">
                 <ListItem button>
                   <ListItemIcon>
+                  <Chat />
+                  </ListItemIcon>
+                  <ListItemText inset primary="Chat on Zoom" />
+                </ListItem>
+                <ListItem button>
+                  <ListItemIcon>
+                  <Chat />
+                  </ListItemIcon>
+                  <ListItemText inset primary="Chat on Teams" />
+                </ListItem>
+                <ListItem button>
+                  <ListItemIcon>
+                  <Chat />
+                  </ListItemIcon>
+                  <ListItemText inset primary="Chat on Slack" />
+                </ListItem>
+                <ListItem button>
+                  <ListItemIcon>
                     <Call />
                   </ListItemIcon>
                   <ListItemText inset primary="Call me back" />
-                </ListItem>
-                <ListItem button>
-                  <ListItemIcon>
-                    <CalendarToday />
-                  </ListItemIcon>
-                  <ListItemText inset primary="Schedule a call" />
-                </ListItem>
-                <ListItem button>
-                  <ListItemIcon>
-                    <Chat />
-                  </ListItemIcon>
-                  <ListItemText inset primary="Chat" />
                 </ListItem>
                 <ListItem button>
                   <ListItemIcon>

@@ -1,6 +1,9 @@
 import React from "react";
 import ChatBot from "react-simple-chatbot";
 import MatChip from "./Chip";
+import TalkToCommunity from '../TalkToCommunity';
+import FeedbackForm from '../FeedbackForm';
+import VideoEmbed from '../VideoEmbed';
 
 function LigoChatbot(props) {
 
@@ -103,10 +106,38 @@ function LigoChatbot(props) {
       id: "ConnectSME",
       component: (
         <div>
-          Component to come
+          <TalkToCommunity />
         </div>
       ),
-      trigger: 'Done'
+      trigger: 'Feedback'
+    },
+    {
+      id: "Feedback",
+      message: "Please provide feedback once you get the issue resolved from our SME",
+      trigger: "Feedback form"
+    },
+    {
+      id: "Feedback form",
+      component: (
+        <FeedbackForm />
+      ),
+      trigger: "Another Help"
+    },
+    {
+      id: "Another Help",
+      message: "Happy to help you if you need anything else",
+      trigger: "Next input"
+    },
+    {
+      id: "Next input",
+      user: true, 
+      trigger: "Video comp"
+    },
+    {
+      id: "Video comp",
+      component: <VideoEmbed />,
+      trigger: "Done"
+    
     },
     {
       id: "Done",
@@ -118,7 +149,7 @@ function LigoChatbot(props) {
   return <ChatBot 
             headerTitle="Ligo"
             recognitionEnable={true}
-            speechSynthesis={{ enable: true, lang: 'en' }}
+            // speechSynthesis={{ enable: true, lang: 'en' }}
             steps={ligoMaterialUICaseSteps} 
             {...config}
           />
