@@ -119,12 +119,12 @@ class FeedbackForm extends React.Component  {
                      <Rating name="sat-conv" />
                    </Box>
                    <Box component="fieldset" mb={3} borderColor="transparent">
-                     <Typography component="legend">How satisfied are you with LIGO?</Typography>
-                     <Rating name="sat-ligo" />
+                     <Typography component="legend">How satisfied are you with WACIS?</Typography>
+                     <Rating name="sat-WACIS" />
                    </Box>
 
                    <Box component="fieldset" mb={3} borderColor="transparent">
-                     <Typography component="legend">Based upon your experience, how likely are  you to recommend LIGO to a friend or colleague</Typography>
+                     <Typography component="legend">Based upon your experience, how likely are  you to recommend WACIS to a friend or colleague</Typography>
                      <Rating name="rec-friend" />
                    </Box>
               </div>
