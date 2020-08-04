@@ -16,7 +16,7 @@ function LigoChatbot(props) {
   const ligoMaterialUICaseSteps = [
     {
       id: "Greet",
-      message: "Hello, I'm Ligo, Walmart’s intelligent system. How can I help, Mr.X?",
+      message: "Hello, I'm WACIS, Walmart’s intelligent system. How can I help, Mr.Suresh?",
       trigger: "Waiting user input for question"
     },
     {
@@ -109,7 +109,19 @@ function LigoChatbot(props) {
           <TalkToCommunity />
         </div>
       ),
-      trigger: 'Feedback'
+      trigger: 'zoom link'
+    },
+    {
+      id: "zoom link",
+      component: (
+        <div>
+        <MatChip
+          label="Zoom link to connect with the SME"
+          link="https://walmart.zoom.us/j/5865575653"
+        />
+        </div>
+      ),
+      trigger:"Feedback"
     },
     {
       id: "Feedback",
@@ -147,7 +159,7 @@ function LigoChatbot(props) {
   ];
 
   return <ChatBot 
-            headerTitle="Ligo"
+            headerTitle="WACIS"
             recognitionEnable={true}
             // speechSynthesis={{ enable: true, lang: 'en' }}
             steps={ligoMaterialUICaseSteps} 
